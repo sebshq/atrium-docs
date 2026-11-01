@@ -1,0 +1,32 @@
+/* Guide pages: the landing page's look, with a list of pages at the side. */
+.guide { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: clamp(2rem, 4vw, 4rem); max-width: 1400px; margin: 0 auto; padding: 7rem clamp(1.2rem, 4vw, 3rem) 4rem; }
+.pages { position: sticky; top: 6rem; align-self: start; display: grid; gap: 0.15rem; font-size: 0.92rem; max-height: calc(100vh - 7rem); overflow: auto; }
+.pages .eyebrow { margin: 1.4rem 0 0.5rem; }
+.pages .eyebrow:first-child { margin-top: 0; }
+.pages a { text-decoration: none; color: var(--muted); padding: 0.3rem 0.7rem; border-radius: 8px; transition: background 0.2s, color 0.2s; }
+.pages a:hover { color: var(--cream); background: rgba(243, 237, 228, 0.05); }
+.pages a.on { color: var(--cream); background: rgba(143, 144, 248, 0.14); }
+@media (max-width: 900px) { .guide { grid-template-columns: 1fr; } .pages { position: static; display: flex; flex-wrap: wrap; max-height: none; } .pages .eyebrow { display: none; } }
+
+.doc { min-width: 0; }
+.doc-head { max-width: 46rem; margin-bottom: clamp(3rem, 7vw, 6rem); }
+.doc-head h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); }
+.doc-head p:not(.eyebrow) { color: var(--muted); font-size: 1.2rem; }
+.doc .feature { margin-bottom: clamp(4rem, 9vw, 7rem); grid-template-columns: 1fr 1.25fr; }
+.doc .feature.wide { display: block; max-width: 52rem; }
+.doc .feature h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
+.doc .feature h3 { font-size: 1.3rem; margin-top: 1.6em; }
+.doc .copy p:not(.eyebrow), .doc .copy li { color: var(--muted); font-size: 1.05rem; }
+.doc .copy strong { color: var(--cream); font-weight: 500; }
+.doc .copy a { color: var(--accent); }
+.doc .copy ul { padding-left: 1.2rem; }
+.doc .copy li { margin: 0.35rem 0; }
+.doc .shot { background: var(--ink-2); }
+.doc .shot video, .doc .shot img { width: 100%; height: 100%; object-fit: cover; display: block; transform: none; }
+.doc code { font: 0.88em var(--mono); background: rgba(243, 237, 228, 0.07); padding: 0.1em 0.4em; border-radius: 5px; color: var(--cream); }
+.doc kbd { font-size: 0.8em; min-width: 0; padding: 0.25em 0.5em; box-shadow: 0 2px 0 #0b0a09; }
+
+.doc table { width: 100%; border-collapse: collapse; font-size: 0.95rem; margin: 1.5rem 0; }
+.doc th { text-align: left; font: 500 0.75rem/1 var(--sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 0 1rem 0.8rem 0; border-bottom: 1px solid var(--line); }
+.doc td { padding: 0.8rem 1rem 0.8rem 0; border-bottom: 1px solid var(--line); color: var(--muted); vertical-align: top; }
+.doc td:first-child { color: var(--cream); white-space: nowrap; font-family: var(--mono); font-size: 0.88rem; }

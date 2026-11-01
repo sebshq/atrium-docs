@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{entry.title}} · Atrium guide</title>
+{{#entry.summary}}<meta name="description" content="{{entry.summary}}">{{/entry.summary}}
+<meta property="og:title" content="{{entry.title}} · Atrium">
+<meta property="og:image" content="{{{siteURL}}}/_assets/calm.jpg">
+<meta name="blot-cache-id" content="{{cacheID}}">
+{{#favicon}}<link rel="icon" href="{{{ico}}}" sizes="any">{{/favicon}}
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=fraunces:400,400i,600,600i|inter:400,500,600|jetbrains-mono:400">
+<link rel="stylesheet" href="{{#cdn}}/landing.css{{/cdn}}">
+<link rel="stylesheet" href="{{#cdn}}/guide.css{{/cdn}}">
+</head>
+<body class="landing guide-page">
+
+<header class="topbar">
+  <a class="brand" href="/">Atrium</a>
+  <nav>
+    <a href="/#workspaces">Workspaces</a>
+    <a href="/#modules">Modules</a>
+    <a href="/#complete">Pricing</a>
+    <a href="/tiles-and-columns">Guide</a>
+  </nav>
+  <a class="btn small" href="https://obsidian.md/plugins?id=atrium">Install</a>
+</header>
+
+<div class="guide">
+  <aside class="pages">
+    <p class="eyebrow">Guide</p>
+    <a href="/tiles-and-columns">Tiles and columns</a>
+    <a href="/workspaces-and-layouts">Workspaces and layouts</a>
+    <a href="/stacks">Stacks</a>
+    <a href="/keyboard">Keyboard</a>
+    <p class="eyebrow">Modules</p>
+    <a href="/modules">All modules</a>
+    <a href="/note">Note</a>
+    <a href="/agenda">Agenda</a>
+    <a href="/music">Music</a>
+    <a href="/podcasts">Podcasts</a>
+    <a href="/terminal">Terminal</a>
+    <a href="/web-page">Web page</a>
+    <a href="/recorder">Recorder</a>
+    <p class="eyebrow">More</p>
+    <a href="/atrium-complete">Atrium Complete</a>
+    <a href="/network-use">Network use</a>
+  </aside>
+  <main class="doc" id="doc">{{{entry.html}}}</main>
+</div>
+
+<footer class="foot">
+  <p class="small">Atrium™ for Obsidian · <a href="mailto:support@atrium-md.com">support@atrium-md.com</a></p>
+</footer>
+
+<script src="{{#cdn}}/guide.js{{/cdn}}"></script>
+</body>
+</html>
