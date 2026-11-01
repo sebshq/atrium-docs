@@ -1,56 +1,32 @@
 // Workspace data: one source for the hero, the chips, the gallery and the viewer.
-// A workspace with `img` shows its real screenshot; the rest draw a mock until their screenshots exist.
 const W = [
   { id: 'calm', name: 'Calm', who: 'The early riser', line: 'Coffee first. Then the day.',
-    what: 'An autumn landscape, glass cards, the clock, weather, agenda and a little Liszt.',
-    img: '/_assets/calm.jpg', video: '/_assets/calm.mp4' },
+    what: 'An autumn landscape, glass cards, the clock, weather, agenda and a little Liszt.', video: '/_assets/calm.mp4' },
   { id: 'cozy', name: 'Cozy', who: 'The homebody', line: 'Blanket not included.',
-    what: 'Warm light, a serif hand, podcasts, habits and the daily note.',
-    cards: [['Podcasts', 4, 3, 'Ep. 212'], ['Daily', 5, 6, 'Sunday, November 1'], ['Habits', 3, 3, '● ● ● ○'], ['Music', 4, 3, 'Rain, softly'], ['Weather', 3, 3, '48°']] },
+    what: "Carl Larsson's lamplight, a serif hand, music, habits and the day's small plans." },
   { id: 'terminal', name: 'Terminal', who: 'The hacker', line: 'Your mouse can take the day off.',
-    what: 'Black and green, monospace, a shell, a web page and a dense tiled layout.',
-    cards: [['Terminal', 7, 4, '$ npm run dev_'], ['Web page', 5, 6, 'github.com'], ['Agenda', 3, 2, '10:00 standup'], ['Daily', 4, 2, '2026-11-01']] },
+    what: 'Black and green, a real shell, a man page and the day in monospace.' },
   { id: 'minimal', name: 'Minimal', who: 'The minimalist', line: 'One note. One clock. Breathe.',
-    what: 'Off-white paper, no frames, the daily note and a small clock.',
-    cards: [['', 2, 6, ''], ['Daily', 7, 6, 'Sunday'], ['Clock', 3, 2, '9:41']] },
-  { id: 'mission', name: 'Mission control', who: 'The maximalist', line: 'Why choose?',
-    what: 'The stars video background and every card there is, stacked and floating.',
-    bg: '/_assets/bg-stars.jpg',
-    cards: ['Clock', 'Weather', 'Agenda', 'Daily', 'Tasks', 'Music', 'Calendar', 'Habits', 'Podcasts', 'Recorder', 'Pomodoro', 'Web page'].map(t => [t, 3, 2, '']) },
-  { id: 'tokyo', name: 'Neo-Tokyo', who: 'The night owl', line: 'Open late.',
-    what: 'Neon rain, magenta and cyan, the agenda timeline and lo-fi on repeat.',
-    cards: [['Agenda', 4, 6, '23:00'], ['Daily', 5, 4, '日曜日'], ['Clock', 3, 3, '23:47'], ['Music', 3, 3, 'lo-fi'], ['Web page', 5, 2, '']] },
-  { id: 'study', name: 'The study', who: 'The scholar', line: 'Footnotes welcome.',
-    what: 'Saint Jerome at his desk, a reading note, the index and a year ago today.',
-    bg: '/_assets/bg-study.jpg',
-    cards: [['Note', 5, 6, 'On method'], ['Index', 3, 3, ''], ['Time machine', 4, 3, 'A year ago'], ['Web page', 4, 3, 'arxiv.org'], ['Pomodoro', 3, 3, '25:00']] },
-  { id: 'finals', name: 'Finals week', who: 'The student', line: 'Due Friday. Started Thursday.',
-    what: 'Pastels, the calendar, tasks by due date and a stern pomodoro.',
-    cards: [['Calendar', 5, 4, 'November'], ['Tasks', 4, 6, '3 overdue'], ['Pomodoro', 3, 3, '25:00'], ['Upcoming', 3, 3, 'Fri: essay'], ['Daily', 5, 2, '']] },
+    what: 'Paper, a clock and one note. Nothing else asked for.' },
+  { id: 'mission-control', name: 'Mission control', who: 'The maximalist', line: 'Why choose?',
+    what: 'Stars drifting behind every card: agenda, tasks, habits, music, weather and a pomodoro.' },
+  { id: 'neo-tokyo', name: 'Neo-Tokyo', who: 'The night owl', line: 'Open late.',
+    what: "Kawase Hasui's night rain, neon edges, the evening's plans and something on the speakers." },
+  { id: 'the-study', name: 'The study', who: 'The scholar', line: 'Footnotes welcome.',
+    what: "Antonello's Saint Jerome, a reading note, the thesis outline and a year ago today." },
+  { id: 'finals-week', name: 'Finals week', who: 'The student', line: 'Due Friday. Started Thursday.',
+    what: 'Pastels, the calendar, tasks by due date and a stern pomodoro.' },
 ];
+const big = w => w.id === 'calm' ? '/_assets/calm.jpg' : `/_assets/ws-${w.id}.jpg`;
+const small = w => w.id === 'calm' ? '/_assets/calm-small.jpg' : `/_assets/ws-${w.id}-small.jpg`;
 
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const el = (tag, cls, html) => Object.assign(document.createElement(tag), cls ? { className: cls } : {}, html ? { innerHTML: html } : {});
 
-// A workspace's picture: its screenshot, or a mock drawn from its cards.
-function scene(w, big) {
-  if (w.img) {
-    if (big && w.video && !reduce) return el('div', 'scene', `<video src="${w.video}" poster="${w.img}" autoplay muted loop playsinline></video>`);
-    return el('div', 'scene', `<img src="${w.img}" alt="The ${w.name} workspace" loading="lazy">`);
-  }
-  const s = el('div', `scene mock m-${w.id}`);
-  if (w.bg) s.style.backgroundImage = `url(${w.bg})`;
-  s.append(el('p', 'm-date', 'Sunday, November 1'));
-  const grid = el('div', 'm-grid');
-  for (const [t, c, r, big] of w.cards) {
-    const card = el('div', t ? 'm-card' : 'm-gap');
-    card.style.gridColumn = `span ${c}`;
-    card.style.gridRow = `span ${r}`;
-    if (t) card.innerHTML = `<b>${t}</b>${big ? `<span>${big}</span>` : ''}<i></i><i></i>`;
-    grid.append(card);
-  }
-  s.append(grid);
-  return s;
+// A workspace's picture: its clip if asked for and it has one, else its screenshot.
+function scene(w, large) {
+  if (large && w.video && !reduce) return el('div', 'scene', `<video src="${w.video}" poster="${big(w)}" autoplay muted loop playsinline></video>`);
+  return el('div', 'scene', `<img src="${large ? big(w) : small(w)}" alt="The ${w.name} workspace" loading="lazy">`);
 }
 
 // Hero: crossfade through the workspaces; a chip jumps to one.
@@ -87,7 +63,7 @@ viewer.onclick = e => { if (e.target === viewer) viewer.close(); };
 
 // Workspaces demo: names slide past as the scene changes.
 const spaces = document.getElementById('spaces');
-['calm', 'cozy', 'tokyo'].forEach((id, i) => {
+['calm', 'cozy', 'neo-tokyo'].forEach((id, i) => {
   const w = W.find(x => x.id === id);
   const s = scene(w);
   s.style.animationDelay = `${i * -4}s`;
