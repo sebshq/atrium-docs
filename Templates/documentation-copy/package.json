@@ -1,0 +1,108 @@
+{
+  "name": "Atrium Theme",
+  "locals": {
+    "page_size": 100,
+    "page_size_range": [
+      1,
+      100
+    ],
+    "sort_by": "id",
+    "sort_by_options": [
+      "id"
+    ],
+    "sort_order": "asc",
+    "collapse_navigation_by_default": true,
+    "spacing": 1,
+    "spacing_range": [
+      0,
+      4
+    ],
+    "background_color": "#fff",
+    "text_color": "#000",
+    "link_color": "#007bff",
+    "green_color": "rgb(22, 140, 64)",
+    "red_color": "#ff3e00",
+    "yellow_color": "#ffbb26",
+    "hide_dates": false,
+    "date_display": "DD MMMM, YYYY",
+    "syntax_highlighter": {
+      "id": "solarized-light",
+      "styles": "pre code.hljs{overflow-x:auto;display:block;overflow:auto;padding:1em;margin:1em 0;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.hljs{color:#586e75;background:#fdf6e3}.hljs ::selection,.hljs::selection{background-color:#93a1a1;color:#586e75}.hljs-comment{color:#839496}.hljs-tag{color:#657b83}.hljs-operator,.hljs-punctuation,.hljs-subst{color:#586e75}.hljs-operator{opacity:.7}.hljs-bullet,.hljs-deletion,.hljs-name,.hljs-selector-tag,.hljs-template-variable,.hljs-variable{color:#dc322f}.hljs-attr,.hljs-link,.hljs-literal,.hljs-number,.hljs-symbol,.hljs-variable.constant_{color:#cb4b16}.hljs-class .hljs-title,.hljs-title,.hljs-title.class_{color:#b58900}.hljs-strong{font-weight:700;color:#b58900}.hljs-addition,.hljs-code,.hljs-string,.hljs-title.class_.inherited__{color:#859900}.hljs-built_in,.hljs-doctag,.hljs-keyword.hljs-atrule,.hljs-quote,.hljs-regexp{color:#2aa198}.hljs-attribute,.hljs-function .hljs-title,.hljs-section,.hljs-title.function_,.ruby .hljs-property{color:#268bd2}.diff .hljs-meta,.hljs-keyword,.hljs-template-tag,.hljs-type{color:#6c71c4}.hljs-emphasis{color:#6c71c4;font-style:italic}.hljs-meta,.hljs-meta .hljs-keyword,.hljs-meta .hljs-string{color:#d33682}.hljs-meta .hljs-keyword,.hljs-meta-keyword{font-weight:700}.hljs,code.hljs{padding:0;margin:0}"
+    },
+    "syntax_highlighter_font": {
+      "name": "Plex Mono",
+      "id": "plex-mono",
+      "stack": "'Plex Mono'",
+      "tags": [
+        "mono",
+        "system"
+      ],
+      "line_height": 1.6,
+      "line_width": 39,
+      "font_size": 16,
+      "styles": "@font-face{font-family:'Plex Mono';font-style:normal;font-weight:100;src:url('https://cdn.blot.im/fonts/plex-mono/thin.woff2?version=9c2d24&extension=.woff2') format('woff2'),url('https://cdn.blot.im/fonts/plex-mono/thin.woff?version=64dde8&extension=.woff') format('woff')}@font-face{font-family:'Plex Mono';font-style:italic;font-weight:100;src:url('https://cdn.blot.im/fonts/plex-mono/thin-italic.woff2?version=391a4a&extension=.woff2') format('woff2'),url('https://cdn.blot.im/fonts/plex-mono/thin-italic.woff?version=fd6772&extension=.woff') format('woff')}@font-face{font-family:'Plex Mono';font-style:normal;font-weight:200;src:url('https://cdn.blot.im/fonts/plex-mono/extra-light.woff2?version=5fee91&extension=.woff2') format('woff2'),url('https://cdn.blot.im/fonts/plex-mono/extra-light.woff?version=7d8358&extension=.woff') format('woff')}@font-face{font-family:'Plex Mono';font-style:italic;font-weight:200;src:url('https://cdn.blot.im/fonts/plex-mono/extra-light-italic.woff2?version=a7f34c&extension=.woff2') format('woff2'),url('https://cdn.blot.im/fonts/plex-mono/extra-light-italic.woff?version=65608d&extension=.woff') format('woff')}@font-face{font-family:'Plex Mono';font-style:normal;font-weight:300;src:url('https://cdn.blot.im/fonts/plex-mono/light.woff2?version=02d85a&extension=.woff2') format('woff2'),url('https://cdn.blot.im/fonts/plex-mono/light.woff?version=35b488&extension=.woff') format('woff')}@font-face{font-family:'Plex Mono';font-style:italic;font-weight:300;src:url('https://cdn.blot.im/fonts/plex-mono/light-italic.woff2?version=75eeee&extension=.woff2') format('woff2'),url('https://cdn.blot.im/fonts/plex-mono/light-italic.woff?version=8d9e21&extension=.woff') format('woff')}@font-face{font-family:'Plex Mono';font-style:normal;font-weight:400;src:url('https://cdn.blot.im/fonts/plex-mono/regular.woff2?version=c13be1&extension=.woff2') format('woff2'),url('https://cdn.blot.im/fonts/plex-mono/regular.woff?version=3bbb37&extension=.woff') format('woff')}@font-face{font-family:'Plex Mono';font-style:italic;font-weight:400;src:url('https://cdn.blot.im/fonts/plex-mono/italic.woff2?version=f04c5f&extension=.woff2') format('woff2'),url('https://cdn.blot.im/fonts/plex-mono/italic.woff?version=cb143f&extension=.woff') format('woff')}@font-face{font-family:'Plex Mono';font-style:normal;font-weight:450;src:url('https://cdn.blot.im/fonts/plex-mono/text.woff2?version=22ce85&extension=.woff2') format('woff2'),url('https://cdn.blot.im/fonts/plex-mono/text.woff?version=2e2733&extension=.woff') format('woff')}@font-face{font-family:'Plex Mono';font-style:italic;font-weight:450;src:url('https://cdn.blot.im/fonts/plex-mono/text-italic.woff2?version=7617f6&extension=.woff2') format('woff2'),url('https://cdn.blot.im/fonts/plex-mono/text-italic.woff?version=134271&extension=.woff') format('woff')}@font-face{font-family:'Plex Mono';font-style:normal;font-weight:500;src:url('https://cdn.blot.im/fonts/plex-mono/medium.woff2?version=536a8a&extension=.woff2') format('woff2'),url('https://cdn.blot.im/fonts/plex-mono/medium.woff?version=8987a9&extension=.woff') format('woff')}@font-face{font-family:'Plex Mono';font-style:normal;font-weight:500;src:url('https://cdn.blot.im/fonts/plex-mono/semi-bold.woff2?version=db0a79&extension=.woff2') format('woff2'),url('https://cdn.blot.im/fonts/plex-mono/semi-bold.woff?version=be9dac&extension=.woff') format('woff')}@font-face{font-family:'Plex Mono';font-style:italic;font-weight:500;src:url('https://cdn.blot.im/fonts/plex-mono/medium-italic.woff2?version=5cbb96&extension=.woff2') format('woff2'),url('https://cdn.blot.im/fonts/plex-mono/medium-italic.woff?version=5b31cd&extension=.woff') format('woff')}@font-face{font-family:'Plex Mono';font-style:italic;font-weight:500;src:url('https://cdn.blot.im/fonts/plex-mono/semi-bold-italic.woff2?version=da4b02&extension=.woff2') format('woff2'),url('https://cdn.blot.im/fonts/plex-mono/semi-bold-italic.woff?version=863608&extension=.woff') format('woff')}@font-face{font-family:'Plex Mono';font-style:normal;font-weight:600;src:url('https://cdn.blot.im/fonts/plex-mono/bold.woff2?version=93c5e8&extension=.woff2') format('woff2'),url('https://cdn.blot.im/fonts/plex-mono/bold.woff?version=e497c7&extension=.woff') format('woff')}@font-face{font-family:'Plex Mono';font-style:italic;font-weight:600;src:url('https://cdn.blot.im/fonts/plex-mono/bold-italic.woff2?version=5b8973&extension=.woff2') format('woff2'),url('https://cdn.blot.im/fonts/plex-mono/bold-italic.woff?version=0cc0d0&extension=.woff') format('woff')}.pull-double{margin-left:-.6em}.push-double{margin-right:.6em}.pull-single{margin-left:-.6em}.push-single{margin-right:.6em}.push-double,.push-single{display:inline-block}",
+      "specimen": {
+        "hash": "5819ac4c",
+        "width": 388.8,
+        "height": 93.6
+      }
+    },
+    "font": {
+      "name": "System sans-serif",
+      "id": "system-sans",
+      "stack": "-apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif",
+      "tags": [
+        "sans",
+        "system"
+      ],
+      "line_height": 1.4,
+      "line_width": 38,
+      "font_size": 16,
+      "styles": ""
+    },
+    "profile_image": {},
+    "sticky_navigation": false,
+    "navigation_alignment": "justified",
+    "navigation_alignment_options": [
+      "justified",
+      "left",
+      "right",
+      "center"
+    ],
+    "navigation_width": 250,
+    "navigation_width_range": [
+      160,
+      400
+    ],
+    "demo_folder": "documentation"
+  },
+  "views": {
+    "error.html": {
+      "partials": {
+        "title": "{{{error.title}}} - {{{title}}}"
+      }
+    },
+    "pagination.html": {
+      "url": "/pagination/:page",
+      "locals": {
+        "page_size": 100
+      }
+    },
+    "archives.html": {
+      "url": "/archives",
+      "partials": {
+        "title": "Archives - {{{title}}}"
+      }
+    },
+    "entry.html": {
+      "partials": {
+        "title": "{{{entry.title}}}"
+      }
+    },
+    "entries.html": {
+      "partials": {
+        "title": "{{{title}}}"
+      }
+    }
+  }
+}
