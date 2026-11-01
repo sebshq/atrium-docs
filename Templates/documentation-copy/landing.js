@@ -1,9 +1,9 @@
 // Workspace data: one source for the hero, the chips, the gallery and the viewer.
 const W = [
-  { id: 'classic', name: 'Classic', who: 'The romantic', line: "They don't make them like this anymore.",
-    what: 'Rain on the window, a serif hand, the clock, weather, music and the day in columns.' },
-  { id: 'hillside', name: 'Hillside', who: 'The homebody', line: 'Second breakfast, then the garden.',
-    what: 'Green hills rolling by, five meals planned, a pantry list, naps tracked as habits.' },
+  { id: 'atmospheric', name: 'Atmospheric', who: 'The daydreamer', line: 'Rain on the glass. Nowhere to be.',
+    what: 'Rain running down the window, a serif hand, the clock, weather, music and the day in columns.' },
+  { id: 'hillside', name: 'Hillside', who: 'The nature lover', line: 'Out the door by seven. Back for second breakfast.',
+    what: 'A meadow moving in the wind, the weather up front, field notes on the birds, and walks tracked as habits.' },
   { id: 'terminal', name: 'Terminal', who: 'The hacker', line: 'Your mouse can take the day off.',
     what: 'Black and green, a real shell, a man page and the day in monospace.' },
   { id: 'minimal', name: 'Minimal', who: 'The minimalist', line: 'One note. One clock. Breathe.',
@@ -13,11 +13,13 @@ const W = [
   { id: 'neo-tokyo', name: 'Neo-Tokyo', who: 'The night owl', line: 'Open late.',
     what: "Neon signs humming, the evening's plans, and synthwave on the speakers." },
   { id: 'the-study', name: 'The study', who: 'The scholar', line: 'Footnotes welcome.',
-    what: 'An old map by candlelight, a reading note, the thesis outline and a year ago today.' },
+    what: "Antonello's Saint Jerome at his desk, a reading note, the thesis outline and a year ago today." },
   { id: 'the-reader', name: 'The reader', who: 'The bookworm', line: 'Just one more chapter.',
     what: "Alice down the rabbit-hole, Tenniel's White Rabbit, pages read as a habit, and shelves in the half-light." },
-  { id: 'finals-week', name: 'Finals week', who: 'The student', line: 'Due Friday. Started Thursday.',
-    what: 'A quiet café, fans turning overhead, the calendar, tasks by due date and a stern pomodoro.' },
+  { id: 'studio', name: 'Studio', who: 'The musician', line: 'Hum it before you forget it.',
+    what: 'A record turning in a dark room, lyrics in progress, the recorder one key away, and the session on the agenda.' },
+  { id: 'the-kitchen', name: 'The kitchen', who: 'The home cook', line: 'Taste as you go.',
+    what: "Something simmering on the stove, tonight's recipe, a timer, the shopping list and the week's dinners." },
 ];
 const big = w => `/_assets/ws-${w.id}.jpg`;
 const small = w => `/_assets/ws-${w.id}-small.jpg`;
@@ -73,7 +75,7 @@ viewer.onclick = e => { if (e.target === viewer) viewer.close(); };
 
 // Workspaces demo: names slide past as the scene changes.
 const spaces = document.getElementById('spaces');
-['classic', 'hillside', 'neo-tokyo'].forEach((id, i) => {
+['atmospheric', 'hillside', 'neo-tokyo'].forEach((id, i) => {
   const w = W.find(x => x.id === id);
   const s = scene(w);
   s.style.animationDelay = `${i * -4}s`;
