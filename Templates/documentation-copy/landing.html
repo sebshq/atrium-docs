@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atrium: a room for your day</title>
+<meta name="description" content="Atrium turns Obsidian into a home page built around your day: the daily note, agenda, weather, music and more, as cards you arrange however you like.">
+<meta property="og:title" content="Atrium: a room for your day">
+<meta property="og:description" content="A home page for Obsidian, built around your day.">
+<meta property="og:image" content="{{{siteURL}}}/_assets/calm.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="blot-cache-id" content="{{cacheID}}">
+{{#favicon}}<link rel="icon" href="{{{ico}}}" sizes="any">{{/favicon}}
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=fraunces:400,400i,600,600i|inter:400,500,600|jetbrains-mono:400">
+<link rel="stylesheet" href="{{#cdn}}/landing.css{{/cdn}}">
+</head>
+<body class="landing">
+
+<header class="topbar">
+  <a class="brand" href="/">Atrium</a>
+  <nav>
+    <a href="#workspaces">Workspaces</a>
+    <a href="#features">Tour</a>
+    <a href="#modules">Modules</a>
+    <a href="#complete">Pricing</a>
+    <a href="/tiles-and-columns">Guide</a>
+  </nav>
+  <a class="btn small" href="https://obsidian.md/plugins?id=atrium">Install</a>
+</header>
+
+<section class="hero">
+  <div class="stage" id="stage">
+    <div class="layer on" data-id="calm">
+      <video src="/_assets/calm.mp4" poster="/_assets/calm.jpg" autoplay muted loop playsinline></video>
+    </div>
+  </div>
+  <div class="hero-copy">
+    <p class="eyebrow">For Obsidian</p>
+    <h1>A room for <em>your day.</em></h1>
+    <p class="lede">Open Obsidian and land somewhere nice: today's note, your agenda, the weather and a song, arranged however you like.</p>
+    <div class="cta">
+      <a class="btn" href="https://obsidian.md/plugins?id=atrium">Install Atrium</a>
+      <a class="btn ghost" href="#workspaces">See the workspaces</a>
+    </div>
+  </div>
+  <div class="chips" id="chips" aria-label="Workspaces"></div>
+</section>
+
+<section id="workspaces" class="block">
+  <div class="intro reveal">
+    <h2>Make it yours. <em>Then make another.</em></h2>
+    <p>One for work, one for Sunday, one for 2&nbsp;a.m. Every workspace keeps its own cards, layout and background. Here are a few we like.</p>
+  </div>
+  <div class="gallery" id="gallery"></div>
+</section>
+
+<section id="features" class="block tour">
+  <article class="feature reveal">
+    <div class="copy">
+      <p class="eyebrow">The daily note</p>
+      <h3>The day, front and centre.</h3>
+      <p>Today's note sits in the middle, editable right there. Step to yesterday or tomorrow, and the agenda, the weather and the month follow along.</p>
+      <a href="/">Read the guide &rarr;</a>
+    </div>
+    <figure class="shot"><img src="/_assets/calm.jpg" alt="Atrium with the daily note in the middle, an agenda, weather and music around it" loading="lazy" style="object-position: 50% 0"></figure>
+  </article>
+
+  <article class="feature flip reveal">
+    <div class="copy">
+      <p class="eyebrow">Tiles and columns</p>
+      <h3>Drag the walls. <em>Everything else moves over.</em></h3>
+      <p>Tiles fill the window like a mosaic; columns line up like a desk. Resize, swap, split or join cards, and switch views without losing a thing.</p>
+      <a href="/tiles-and-columns">Tiles and columns &rarr;</a>
+    </div>
+    <figure class="demo tiles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></figure>
+  </article>
+
+  <article class="feature reveal">
+    <div class="copy">
+      <p class="eyebrow">Workspaces and layouts</p>
+      <h3>One for work, one for Sunday, <em>one for 2&nbsp;a.m.</em></h3>
+      <p>Point at the workspace's name and the others slide out. Each keeps its own cards and background, and each can hold several layouts of the same cards.</p>
+      <a href="/workspaces-and-layouts">Workspaces and layouts &rarr;</a>
+    </div>
+    <figure class="demo spaces" id="spaces" aria-hidden="true"></figure>
+  </article>
+
+  <article class="feature flip reveal">
+    <div class="copy">
+      <p class="eyebrow">Stacks and floating cards</p>
+      <h3>Too many cards? <em>Stack them.</em></h3>
+      <p>Cards can share one spot and show one at a time, like a deck, but tidier. Or float one over the page while you work around it.</p>
+      <a href="/stacks">Stacks &rarr;</a>
+    </div>
+    <figure class="demo stack" aria-hidden="true"><i>Podcasts</i><i>Music</i><i>Agenda</i></figure>
+  </article>
+
+  <article class="feature reveal">
+    <div class="copy">
+      <p class="eyebrow">Keyboard</p>
+      <h3>Your mouse can take <em>the day off.</em></h3>
+      <p>Arrows pick a card, Shift moves it, a letter adds, splits, stacks or swaps. Every key shows in the menus, so you learn them as you go.</p>
+      <a href="/keyboard">All the keys &rarr;</a>
+    </div>
+    <figure class="demo keys" aria-hidden="true">
+      <span><kbd>⇧</kbd><kbd>A</kbd><small>add</small></span>
+      <span><kbd>⇧</kbd><kbd>S</kbd><small>split</small></span>
+      <span><kbd>:</kbd><small>stack</small></span>
+      <span><kbd>⇧</kbd><kbd>F</kbd><small>float</small></span>
+      <span><kbd>Space</kbd><small>expand</small></span>
+      <span><kbd>?</kbd><small>help</small></span>
+    </figure>
+  </article>
+</section>
+
+<section id="modules" class="block">
+  <div class="intro reveal">
+    <h2>Cards for <em>everything.</em></h2>
+    <p>Everything they show comes from your notes, and everything they change goes back into them, as lines you could have typed.</p>
+  </div>
+  <ul class="modules reveal">
+    <li><b>Daily</b>Today's note, with yesterday and tomorrow a click away.</li>
+    <li><b>Agenda</b>Your events as a list, timeline, week or month.</li>
+    <li><b>Calendar</b>The month, with dots where notes are.</li>
+    <li><b>Tasks</b>What's due, overdue first. Tick, defer, add.</li>
+    <li><b>Weather</b>Now, today and the days ahead.</li>
+    <li><b>Clock</b>It tells the time. Beautifully.</li>
+    <li><b>Note</b>Any note, pinned where you want it.</li>
+    <li><b>Monthly</b>The month's note, following the day.</li>
+    <li><b>Pomodoro</b>Twenty-five minutes, then a break.</li>
+    <li class="pro"><b>Music</b>Your library, lyrics and playlists.</li>
+    <li class="pro"><b>Podcasts</b>Episodes, transcripts and shows.</li>
+    <li class="pro"><b>Recorder</b>Record or dictate into today's note.</li>
+    <li class="pro"><b>Terminal</b>A real shell, in a card.</li>
+    <li class="pro"><b>Web page</b>Browse, or keep mail open as a card.</li>
+    <li class="pro"><b>Focus</b>One task, everything else dimmed.</li>
+    <li class="pro"><b>Time machine</b>What you wrote on this day.</li>
+    <li class="pro"><b>Habits</b>Little streaks, kept in your notes.</li>
+    <li class="pro"><b>Video backgrounds</b>Stars, rain, the sea. Your call.</li>
+  </ul>
+  <p class="legend reveal"><span class="dot"></span> Part of Atrium Complete</p>
+</section>
+
+<section id="complete" class="block complete">
+  <div class="price-card reveal">
+    <p class="eyebrow">Atrium Complete</p>
+    <h2>$14.99, <em>once.</em></h2>
+    <p>Atrium is free to use. Complete adds Music, Podcasts, Recorder, Terminal, Web page, Focus, Time machine, Habits and video backgrounds. Try it all free for 30 days; after that, one key works on up to three devices, for life.</p>
+    <p class="note">The first 1,000 keys are free.</p>
+    <div class="cta">
+      <a class="btn" href="https://buy.polar.sh/polar_cl_y0kZRpPkmgPvNxV0jekPBHkZdU4a5oBNyric248vSAY?discount_code=EARLYBIRD">Get a key</a>
+      <a class="btn ghost" href="/atrium-complete">How it works</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <p>Atrium goes online only for what you ask of it: the weather, your podcasts, the pages you open, and your key, once. <a href="/network-use">The full list.</a></p>
+  <p class="small">Atrium™ for Obsidian · <a href="mailto:support@atrium-md.com">support@atrium-md.com</a></p>
+</footer>
+
+<dialog id="viewer">
+  <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+  <div class="viewer-media"></div>
+  <h3></h3>
+  <p class="who"></p>
+  <p class="what"></p>
+</dialog>
+
+<script src="{{#cdn}}/landing.js{{/cdn}}"></script>
+</body>
+</html>
