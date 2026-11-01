@@ -17,7 +17,7 @@ const W = [
   { id: 'the-reader', name: 'The reader', who: 'The bookworm', line: 'Just one more chapter.',
     what: "Alice down the rabbit-hole, Tenniel's White Rabbit, pages read as a habit, and shelves in the half-light." },
   { id: 'finals-week', name: 'Finals week', who: 'The student', line: 'Due Friday. Started Thursday.',
-    what: 'Clouds going by, the calendar, tasks by due date and a stern pomodoro.' },
+    what: 'A quiet café, fans turning overhead, the calendar, tasks by due date and a stern pomodoro.' },
 ];
 const big = w => `/_assets/ws-${w.id}.jpg`;
 const small = w => `/_assets/ws-${w.id}-small.jpg`;
