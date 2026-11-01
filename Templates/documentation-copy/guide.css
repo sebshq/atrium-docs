@@ -29,4 +29,4 @@
 .doc table { width: 100%; border-collapse: collapse; font-size: 0.95rem; margin: 1.5rem 0; }
 .doc th { text-align: left; font: 500 0.75rem/1 var(--sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 0 1rem 0.8rem 0; border-bottom: 1px solid var(--line); }
 .doc td { padding: 0.8rem 1rem 0.8rem 0; border-bottom: 1px solid var(--line); color: var(--muted); vertical-align: top; }
-.doc td:first-child { color: var(--cream); white-space: nowrap; font-family: var(--mono); font-size: 0.88rem; }
+.doc td:first-child { color: var(--cream); font-family: var(--mono); font-size: 0.88rem; min-width: 9rem; max-width: 14rem; }
