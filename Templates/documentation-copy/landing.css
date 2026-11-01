@@ -30,7 +30,8 @@ h3 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
 
 /* Top bar */
 .topbar { position: fixed; inset: 0 0 auto; z-index: 10; display: flex; align-items: center; gap: 2rem; padding: 1rem clamp(1rem, 4vw, 3rem); backdrop-filter: blur(14px) saturate(1.4); -webkit-backdrop-filter: blur(14px) saturate(1.4); background: rgba(15, 14, 13, 0.35); border-bottom: 1px solid var(--line); }
-.brand { font: italic 600 1.5rem/1 var(--serif); text-decoration: none; }
+.brand { font: italic 600 1.5rem/1 var(--serif); }
+.topbar a { text-decoration: none; }
 .topbar nav { display: flex; gap: 1.6rem; margin-left: auto; font-size: 0.92rem; }
 .topbar nav a { text-decoration: none; color: var(--muted); transition: color 0.2s; }
 .topbar nav a:hover { color: var(--cream); }
@@ -38,7 +39,7 @@ h3 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
 
 /* Hero */
 .hero { position: relative; min-height: 100svh; display: grid; align-content: end; padding: 8rem clamp(1.2rem, 5vw, 4rem) 2rem; overflow: hidden; }
-.stage { position: absolute; inset: 0; }
+.stage { position: absolute; inset: 69px 0 0; }
 .stage::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,14,13,0.2) 0%, rgba(15,14,13,0) 35%, rgba(15,14,13,0.75) 72%, var(--ink) 100%); }
 .layer { position: absolute; inset: 0; opacity: 0; transform: scale(1.06); transition: opacity 1.4s var(--ease), transform 7s linear; }
 .layer.on { opacity: 1; transform: scale(1); }
