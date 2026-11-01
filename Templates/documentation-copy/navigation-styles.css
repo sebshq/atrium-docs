@@ -1,0 +1,87 @@
+.sidebar {
+  visibility: hidden;
+}
+.sidebar.initialized {
+  visibility: visible;
+  transition: visibility 0s;
+}
+
+.sidebar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+  }
+  
+  .sidebar li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sidebar a,
+  .sidebar button {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    font: inherit;
+    color: inherit;
+    border: 0;
+    background: none;
+  }
+  
+  .sidebar a:hover {
+    color: var(--text-color);
+  }
+  
+  .sidebar a.active {
+    color: var(--text-color);
+    font-weight: 500;
+  }
+
+  .sidebar > li > a,
+  .sidebar > li > .folder-label {
+    font-weight: 500;
+  }
+
+  .sidebar .folder-label {
+    width: 100%;
+    padding-right: 2.5rem;
+    text-align: left;
+  }
+
+  .sidebar button.folder-label {
+    cursor: pointer;
+  }
+
+  .sidebar .folder-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .sidebar .folder-toggle::before {
+    content: "›";
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+
+  .sidebar li[aria-expanded="true"] > .folder-toggle::before {
+    transform: rotate(90deg);
+  }
+  
+  .sidebar .submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1rem;
+  }
+
+  .sidebar .submenu[hidden] {
+    display: none;
+  }
+  
+  
