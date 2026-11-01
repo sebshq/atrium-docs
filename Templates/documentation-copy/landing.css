@@ -75,6 +75,8 @@ h3 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
 
 /* A workspace picture, always 16:10 */
 .scene { position: relative; aspect-ratio: 16 / 10; border-radius: 14px; overflow: hidden; container-type: inline-size; background: #222; }
+.scene > .hover-clip { position: absolute; inset: 0; border-radius: inherit; animation: fade .4s var(--ease); }
+@keyframes fade { from { opacity: 0; } }
 .scene > img, .scene > video { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
 /* Tour */
 .tour { display: grid; gap: clamp(5rem, 10vw, 8rem); }
@@ -137,7 +139,7 @@ kbd { font: 500 1.05rem/1 var(--mono); min-width: 2.6rem; padding: 0.7rem 0.75re
 
 /* Complete */
 .complete { display: grid; place-items: center; }
-.price-card { max-width: 40rem; text-align: center; padding: clamp(2.5rem, 6vw, 4.5rem); border-radius: 24px; background: linear-gradient(rgba(15,14,13,0.55), rgba(15,14,13,0.85)), url('/_assets/calm.jpg') center / cover; border: 1px solid var(--line); box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
+.price-card { max-width: 40rem; text-align: center; padding: clamp(2.5rem, 6vw, 4.5rem); border-radius: 24px; background: linear-gradient(rgba(15,14,13,0.55), rgba(15,14,13,0.85)), url('/_assets/ws-hillside.jpg') center / cover; border: 1px solid var(--line); box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
 .price-card p { color: var(--muted); }
 .price-card .note { font: italic 1.2rem var(--serif); color: var(--accent); }
 .price-card .cta { justify-content: center; margin-top: 2rem; }

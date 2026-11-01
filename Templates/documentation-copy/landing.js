@@ -1,9 +1,9 @@
 // Workspace data: one source for the hero, the chips, the gallery and the viewer.
 const W = [
-  { id: 'calm', name: 'Calm', who: 'The early riser', line: 'Coffee first. Then the day.',
-    what: 'An autumn landscape, glass cards, the clock, weather, agenda and a little Liszt.', video: '/_assets/calm.mp4' },
-  { id: 'cozy', name: 'Cozy', who: 'The homebody', line: 'Blanket not included.',
-    what: "Carl Larsson's lamplight, a serif hand, music, habits and the day's small plans." },
+  { id: 'classic', name: 'Classic', who: 'The romantic', line: "They don't make them like this anymore.",
+    what: 'Rain on the window, a serif hand, the clock, weather, music and the day in columns.' },
+  { id: 'hillside', name: 'Hillside', who: 'The homebody', line: 'Second breakfast, then the garden.',
+    what: 'Green hills rolling by, five meals planned, a pantry list, naps tracked as habits.' },
   { id: 'terminal', name: 'Terminal', who: 'The hacker', line: 'Your mouse can take the day off.',
     what: 'Black and green, a real shell, a man page and the day in monospace.' },
   { id: 'minimal', name: 'Minimal', who: 'The minimalist', line: 'One note. One clock. Breathe.',
@@ -11,47 +11,57 @@ const W = [
   { id: 'mission-control', name: 'Mission control', who: 'The maximalist', line: 'Why choose?',
     what: 'Stars drifting behind every card: agenda, tasks, habits, music, weather and a pomodoro.' },
   { id: 'neo-tokyo', name: 'Neo-Tokyo', who: 'The night owl', line: 'Open late.',
-    what: "Kawase Hasui's night rain, neon edges, the evening's plans and something on the speakers." },
+    what: "Neon signs humming, the evening's plans, and synthwave on the speakers." },
   { id: 'the-study', name: 'The study', who: 'The scholar', line: 'Footnotes welcome.',
-    what: "Antonello's Saint Jerome, a reading note, the thesis outline and a year ago today." },
+    what: 'An old map by candlelight, a reading note, the thesis outline and a year ago today.' },
+  { id: 'the-reader', name: 'The reader', who: 'The bookworm', line: 'Just one more chapter.',
+    what: "Alice down the rabbit-hole, Tenniel's White Rabbit, pages read as a habit, and shelves in the half-light." },
   { id: 'finals-week', name: 'Finals week', who: 'The student', line: 'Due Friday. Started Thursday.',
-    what: 'Pastels, the calendar, tasks by due date and a stern pomodoro.' },
+    what: 'Clouds going by, the calendar, tasks by due date and a stern pomodoro.' },
 ];
-const big = w => w.id === 'calm' ? '/_assets/calm.jpg' : `/_assets/ws-${w.id}.jpg`;
-const small = w => w.id === 'calm' ? '/_assets/calm-small.jpg' : `/_assets/ws-${w.id}-small.jpg`;
+const big = w => `/_assets/ws-${w.id}.jpg`;
+const small = w => `/_assets/ws-${w.id}-small.jpg`;
+const clip = w => `/_assets/ws-${w.id}.mp4`;
 
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const el = (tag, cls, html) => Object.assign(document.createElement(tag), cls ? { className: cls } : {}, html ? { innerHTML: html } : {});
 
-// A workspace's picture: its clip if asked for and it has one, else its screenshot.
-function scene(w, large) {
-  if (large && w.video && !reduce) return el('div', 'scene', `<video src="${w.video}" poster="${big(w)}" autoplay muted loop playsinline></video>`);
-  return el('div', 'scene', `<img src="${large ? big(w) : small(w)}" alt="The ${w.name} workspace" loading="lazy">`);
+// A workspace's picture: its clip, large and moving, or its still.
+function scene(w, moving) {
+  if (moving && !reduce) return el('div', 'scene', `<video src="${clip(w)}" poster="${big(w)}" muted loop playsinline preload="none"></video>`);
+  return el('div', 'scene', `<img src="${moving ? big(w) : small(w)}" alt="The ${w.name} workspace" loading="lazy">`);
 }
+const play = (node, on) => { const v = node.querySelector('video'); if (v) on ? v.play().catch(() => {}) : v.pause(); };
 
 // Hero: crossfade through the workspaces; a chip jumps to one.
 const stage = document.getElementById('stage');
 const chips = document.getElementById('chips');
-const layers = [stage.firstElementChild];
-W.slice(1).forEach(w => { const l = el('div', 'layer'); l.dataset.id = w.id; l.append(scene(w, true)); stage.append(l); layers.push(l); });
+const layers = W.map(w => { const l = el('div', 'layer'); l.dataset.id = w.id; l.append(scene(w, true)); stage.append(l); return l; });
 let at = 0, timer;
 const show = i => {
   at = (i + W.length) % W.length;
-  layers.forEach((l, j) => l.classList.toggle('on', j === at));
+  // Only the one showing plays, so the others don't load until their turn.
+  layers.forEach((l, j) => { l.classList.toggle('on', j === at); play(l, j === at); });
   [...chips.children].forEach((c, j) => c.setAttribute('aria-pressed', j === at));
 };
 W.forEach((w, i) => { const b = el('button', 'chip', w.name); b.onclick = () => { show(i); clearInterval(timer); }; chips.append(b); });
 show(0);
-if (!reduce) timer = setInterval(() => show(at + 1), 5000);
+if (!reduce) timer = setInterval(() => show(at + 1), 7000);
 
 // Gallery and viewer.
 const gallery = document.getElementById('gallery');
 const viewer = document.getElementById('viewer');
 W.forEach(w => {
   const t = el('button', 'tile reveal');
-  t.append(scene(w), el('span', 'cap', `<b>${w.name}</b><small>${w.who}</small><em>${w.line}</em>`));
+  // The still, and over it, while pointed at, the clip.
+  const still = scene(w);
+  t.onmouseenter = () => { if (reduce) return; const s = scene(w, true); s.classList.add('hover-clip'); still.append(s); play(s, true); };
+  t.onmouseleave = () => still.querySelector('.hover-clip')?.remove();
+  t.append(still, el('span', 'cap', `<b>${w.name}</b><small>${w.who}</small><em>${w.line}</em>`));
   t.onclick = () => {
-    viewer.querySelector('.viewer-media').replaceChildren(scene(w, true));
+    const s = scene(w, true);
+    viewer.querySelector('.viewer-media').replaceChildren(s);
+    play(s, true);
     viewer.querySelector('h3').textContent = w.name;
     viewer.querySelector('.who').textContent = `${w.who}. ${w.line}`;
     viewer.querySelector('.what').textContent = w.what;
@@ -63,7 +73,7 @@ viewer.onclick = e => { if (e.target === viewer) viewer.close(); };
 
 // Workspaces demo: names slide past as the scene changes.
 const spaces = document.getElementById('spaces');
-['calm', 'cozy', 'neo-tokyo'].forEach((id, i) => {
+['classic', 'hillside', 'neo-tokyo'].forEach((id, i) => {
   const w = W.find(x => x.id === id);
   const s = scene(w);
   s.style.animationDelay = `${i * -4}s`;
