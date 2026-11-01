@@ -1,0 +1,18 @@
+<!-- Hidden checkbox to toggle navigation -->
+<input type="checkbox" id="nav-toggle" />
+<nav class="nav-container">
+  <label for="nav-toggle" class="nav-label"
+    ><span class="icon-dots"></span
+  ></label>
+  <div class="index-link">
+    <a href="/">{{#profile_image.thumbnails.small}}<img width="{{width}}" height="{{height}}" src="{{{url}}}" srcset="{{{url}}} {{width}}w{{#profile_image.thumbnails.medium}}, {{{url}}} {{width}}w{{/profile_image.thumbnails.medium}}{{#profile_image.thumbnails.large}}, {{{url}}} {{width}}w{{/profile_image.thumbnails.large}}" sizes="24px" alt="" class="site-logo">{{/profile_image.thumbnails.small}}{{title}}</a>
+  </div>
+
+  <ul class="nav-links menubar">
+    {{#menu}}
+    <li data-path="{{{id}}}" data-url="{{{url}}}" data-label="{{{label}}}"><a href="{{{url}}}">{{{label}}}</a></li>
+    {{/menu}}
+    <li class="nav-search"><a href="/search" aria-label="Search"><span class="icon-search"></span></a></li>
+  </ul>
+</nav>
+<label for="nav-toggle" class="popup-cover"></label>
