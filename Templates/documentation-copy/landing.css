@@ -132,10 +132,12 @@ kbd { font: 500 1.05rem/1 var(--mono); min-width: 2.6rem; padding: 0.7rem 0.75re
 
 /* Modules */
 .modules { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
-.modules li { box-shadow: inset -1px -1px 0 var(--line); margin: 0 -1px -1px 0; padding: 1.4rem; color: var(--muted); font-size: 0.95rem; transition: background 0.3s; }
+.modules li { box-shadow: inset -1px -1px 0 var(--line); margin: 0 -1px -1px 0; color: var(--muted); font-size: 0.95rem; transition: background 0.3s; }
 .modules li:hover { background: var(--ink-2); }
+.modules a { display: block; height: 100%; padding: 1.4rem; color: inherit; text-decoration: none; }
 .modules b { display: block; color: var(--cream); font: 400 1.25rem/1.3 var(--serif); margin-bottom: 0.3rem; }
-.modules .pro b::after, .legend .dot { content: ''; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); margin-left: 0.5rem; vertical-align: middle; }
+.modules .pro b::after { content: '\00a0\00a0'; display: inline; padding-left: 0.3rem; background: radial-gradient(circle, var(--accent) 3.5px, transparent 4px) right center / 7px 7px no-repeat; }
+.legend .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); vertical-align: middle; }
 .legend { color: var(--muted); font-size: 0.9rem; }
 .legend .dot { margin: 0 0.4rem 0 0; }
 
