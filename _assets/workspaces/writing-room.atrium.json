@@ -5,38 +5,38 @@
 	"layout": {
 		"modules": [
 			{
-				"id": "64a99ca6-4484-41aa-9d03-d6b2228c4137",
+				"id": "d8d6d6ae-24bb-40a3-af34-909f89156438",
 				"type": "timer",
 				"config": {}
 			},
 			{
-				"id": "dba67a64-53e3-41ba-8bbe-f578298c070c",
+				"id": "c434fbaf-e34f-4d34-989a-6f85b1476d57",
 				"type": "focus",
 				"config": {}
 			},
 			{
-				"id": "eafab626-d996-4b2e-a237-f6d68c6e9c06",
+				"id": "38764bd3-2553-4c9d-8534-ce894b52416a",
 				"type": "note",
 				"config": {
 					"path": "Atrium samples/Writing room/Draft.md"
 				}
 			},
 			{
-				"id": "0daa2ddc-a3c8-49f1-9ec8-45ba78dd0418",
+				"id": "a2e61dbf-4851-41b8-8e85-23b3ed7fdf47",
 				"type": "music",
 				"config": {
 					"path": "Atrium samples/Writing room/Playlist.md"
 				}
 			},
 			{
-				"id": "2a93cd0e-93d4-42a5-99a4-88707bb06391",
+				"id": "2b99eda4-d940-49ff-bc0b-bbd0b57b1aca",
 				"type": "note",
 				"config": {
 					"path": "Atrium samples/Writing room/Ideas.md"
 				}
 			},
 			{
-				"id": "7b03818f-dc15-415f-a69d-4235fafc41cf",
+				"id": "657ab9f2-2fb7-43dc-9a9c-85ca4aa204c0",
 				"type": "recorder",
 				"config": {}
 			}
@@ -51,17 +51,17 @@
 					"size": 0.9,
 					"tiles": [
 						{
-							"id": "64a99ca6-4484-41aa-9d03-d6b2228c4137",
+							"id": "d8d6d6ae-24bb-40a3-af34-909f89156438",
 							"size": 1.4
 						},
 						{
-							"id": "dba67a64-53e3-41ba-8bbe-f578298c070c",
+							"id": "c434fbaf-e34f-4d34-989a-6f85b1476d57",
 							"size": 0.6
 						}
 					]
 				},
 				{
-					"id": "eafab626-d996-4b2e-a237-f6d68c6e9c06",
+					"id": "38764bd3-2553-4c9d-8534-ce894b52416a",
 					"size": 2
 				},
 				{
@@ -69,15 +69,15 @@
 					"size": 1,
 					"tiles": [
 						{
-							"id": "0daa2ddc-a3c8-49f1-9ec8-45ba78dd0418",
+							"id": "a2e61dbf-4851-41b8-8e85-23b3ed7fdf47",
 							"size": 1.4
 						},
 						{
-							"id": "2a93cd0e-93d4-42a5-99a4-88707bb06391",
+							"id": "2b99eda4-d940-49ff-bc0b-bbd0b57b1aca",
 							"size": 1
 						},
 						{
-							"id": "7b03818f-dc15-415f-a69d-4235fafc41cf",
+							"id": "657ab9f2-2fb7-43dc-9a9c-85ca4aa204c0",
 							"size": 0.8
 						}
 					]
@@ -88,7 +88,8 @@
 		"background": "https://atrium-md.com/_assets/backgrounds/window-rain.mp4",
 		"backgroundDim": 0.2,
 		"cardOpacity": 0.7,
-		"cardBlur": 12
+		"cardBlur": 12,
+		"scheme": "dark"
 	},
 	"files": {
 		"Atrium samples/Writing room/Draft.md": "IyBEcmFmdAoKVGhlIGxhbXAgd2FzIGFscmVhZHkgbGl0IHdoZW4gc2hlIGNhbWUgZG93biwgd2hpY2ggbWVhbnQgc29tZW9uZSBoYWQgYmVlbiB1cCBiZWZvcmUgaGVyLgoKLS0tCgoqV3JpdGUgZm9yIHR3ZW50eS1maXZlIG1pbnV0ZXMgYmVmb3JlIHlvdSByZWFkIGFueSBvZiBpdCBiYWNrLiBTdGFydCB0aGUgdGltZXIgb24gdGhlIGxlZnQ7IHRoZSBGb2N1cyBjYXJkIGtlZXBzIHRoZSBvbmUgdGhpbmcgeW91J3JlIHdvcmtpbmcgb24gaW4gc2lnaHQuIFRhbGsgYSBwYXNzYWdlIG91dCBsb3VkIGludG8gdGhlIFJlY29yZGVyIHdoZW4gdHlwaW5nIGdldHMgaW4gdGhlIHdheS4qCg==",

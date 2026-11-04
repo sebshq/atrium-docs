@@ -5,17 +5,17 @@
 	"layout": {
 		"modules": [
 			{
-				"id": "caa5f01d-6d33-472f-becb-7027c84c2dc2",
+				"id": "3313cd12-726e-4659-940b-fdf2c50dbab9",
 				"type": "clock",
 				"config": {}
 			},
 			{
-				"id": "046bc0cc-56ca-4d97-8151-97da12ec21d4",
+				"id": "bbdf8b7c-603b-4152-9d08-207b4832221f",
 				"type": "weather",
 				"config": {}
 			},
 			{
-				"id": "5db704f2-ee86-484d-b86b-a2c6be0f7d8a",
+				"id": "658bab97-9fdb-46d6-93de-f5f09eea4169",
 				"type": "habits",
 				"config": {
 					"habits": [
@@ -26,22 +26,22 @@
 				}
 			},
 			{
-				"id": "794b594e-bf17-4883-b7a2-28f138724c11",
+				"id": "1c19b907-883a-488d-8419-999f152ebc76",
 				"type": "daily",
 				"config": {}
 			},
 			{
-				"id": "17943e3f-1d0e-403b-b499-239937af354a",
+				"id": "006ce193-32ef-4ada-999b-c15ccd4fa88c",
 				"type": "agenda",
 				"config": {}
 			},
 			{
-				"id": "2b386207-17a8-45f2-9249-2eee78724fd7",
+				"id": "ce5c5151-5515-4900-9d77-4348cca9dbc1",
 				"type": "tasks",
 				"config": {}
 			},
 			{
-				"id": "b910d8e0-4a57-4429-a8c0-136767df4817",
+				"id": "64dd0e8a-879f-461d-b6c4-3da90dc23ac6",
 				"type": "time-machine",
 				"config": {
 					"intervals": [
@@ -62,15 +62,15 @@
 					"size": 1,
 					"tiles": [
 						{
-							"id": "caa5f01d-6d33-472f-becb-7027c84c2dc2",
+							"id": "3313cd12-726e-4659-940b-fdf2c50dbab9",
 							"size": 1
 						},
 						{
-							"id": "046bc0cc-56ca-4d97-8151-97da12ec21d4",
+							"id": "bbdf8b7c-603b-4152-9d08-207b4832221f",
 							"size": 1.4
 						},
 						{
-							"id": "5db704f2-ee86-484d-b86b-a2c6be0f7d8a",
+							"id": "658bab97-9fdb-46d6-93de-f5f09eea4169",
 							"size": 1.2
 						}
 					]
@@ -80,11 +80,11 @@
 					"size": 1.6,
 					"tiles": [
 						{
-							"id": "794b594e-bf17-4883-b7a2-28f138724c11",
+							"id": "1c19b907-883a-488d-8419-999f152ebc76",
 							"size": 2
 						},
 						{
-							"id": "b910d8e0-4a57-4429-a8c0-136767df4817",
+							"id": "64dd0e8a-879f-461d-b6c4-3da90dc23ac6",
 							"size": 1
 						}
 					]
@@ -94,11 +94,11 @@
 					"size": 1.2,
 					"tiles": [
 						{
-							"id": "17943e3f-1d0e-403b-b499-239937af354a",
+							"id": "006ce193-32ef-4ada-999b-c15ccd4fa88c",
 							"size": 1.6
 						},
 						{
-							"id": "2b386207-17a8-45f2-9249-2eee78724fd7",
+							"id": "ce5c5151-5515-4900-9d77-4348cca9dbc1",
 							"size": 1.2
 						}
 					]
