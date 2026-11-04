@@ -5,38 +5,38 @@
 	"layout": {
 		"modules": [
 			{
-				"id": "44782dbb-1641-4ddc-843a-9574a5aa81a7",
+				"id": "64a99ca6-4484-41aa-9d03-d6b2228c4137",
 				"type": "timer",
 				"config": {}
 			},
 			{
-				"id": "1159b993-b6af-42db-8bea-15fe48f13293",
+				"id": "dba67a64-53e3-41ba-8bbe-f578298c070c",
 				"type": "focus",
 				"config": {}
 			},
 			{
-				"id": "3a9cebfa-8fbe-456d-85c0-0485838bf6fd",
+				"id": "eafab626-d996-4b2e-a237-f6d68c6e9c06",
 				"type": "note",
 				"config": {
 					"path": "Atrium samples/Writing room/Draft.md"
 				}
 			},
 			{
-				"id": "670bb8e2-c89f-4886-b56d-02033732482c",
+				"id": "0daa2ddc-a3c8-49f1-9ec8-45ba78dd0418",
 				"type": "music",
 				"config": {
 					"path": "Atrium samples/Writing room/Playlist.md"
 				}
 			},
 			{
-				"id": "104bfd52-cee7-4a47-a24c-779e6af17112",
+				"id": "2a93cd0e-93d4-42a5-99a4-88707bb06391",
 				"type": "note",
 				"config": {
 					"path": "Atrium samples/Writing room/Ideas.md"
 				}
 			},
 			{
-				"id": "3fb84dfb-2d44-4699-980e-69626b45db55",
+				"id": "7b03818f-dc15-415f-a69d-4235fafc41cf",
 				"type": "recorder",
 				"config": {}
 			}
@@ -51,17 +51,17 @@
 					"size": 0.9,
 					"tiles": [
 						{
-							"id": "44782dbb-1641-4ddc-843a-9574a5aa81a7",
+							"id": "64a99ca6-4484-41aa-9d03-d6b2228c4137",
 							"size": 1.4
 						},
 						{
-							"id": "1159b993-b6af-42db-8bea-15fe48f13293",
+							"id": "dba67a64-53e3-41ba-8bbe-f578298c070c",
 							"size": 0.6
 						}
 					]
 				},
 				{
-					"id": "3a9cebfa-8fbe-456d-85c0-0485838bf6fd",
+					"id": "eafab626-d996-4b2e-a237-f6d68c6e9c06",
 					"size": 2
 				},
 				{
@@ -69,15 +69,15 @@
 					"size": 1,
 					"tiles": [
 						{
-							"id": "670bb8e2-c89f-4886-b56d-02033732482c",
+							"id": "0daa2ddc-a3c8-49f1-9ec8-45ba78dd0418",
 							"size": 1.4
 						},
 						{
-							"id": "104bfd52-cee7-4a47-a24c-779e6af17112",
+							"id": "2a93cd0e-93d4-42a5-99a4-88707bb06391",
 							"size": 1
 						},
 						{
-							"id": "3fb84dfb-2d44-4699-980e-69626b45db55",
+							"id": "7b03818f-dc15-415f-a69d-4235fafc41cf",
 							"size": 0.8
 						}
 					]

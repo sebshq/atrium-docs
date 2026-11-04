@@ -5,17 +5,17 @@
 	"layout": {
 		"modules": [
 			{
-				"id": "18464131-3bd7-4f31-89f0-f24d607080b0",
+				"id": "caa5f01d-6d33-472f-becb-7027c84c2dc2",
 				"type": "clock",
 				"config": {}
 			},
 			{
-				"id": "62f0da01-9b72-44a6-8fc9-d17fae44cfa3",
+				"id": "046bc0cc-56ca-4d97-8151-97da12ec21d4",
 				"type": "weather",
 				"config": {}
 			},
 			{
-				"id": "3e3fc219-30b2-4681-925d-5da502eaf0e0",
+				"id": "5db704f2-ee86-484d-b86b-a2c6be0f7d8a",
 				"type": "habits",
 				"config": {
 					"habits": [
@@ -26,22 +26,22 @@
 				}
 			},
 			{
-				"id": "44d01221-5b9a-4b53-b36a-692b80734ce0",
+				"id": "794b594e-bf17-4883-b7a2-28f138724c11",
 				"type": "daily",
 				"config": {}
 			},
 			{
-				"id": "54978342-e359-4455-9d0d-7e19a5ca6780",
+				"id": "17943e3f-1d0e-403b-b499-239937af354a",
 				"type": "agenda",
 				"config": {}
 			},
 			{
-				"id": "3b6fa441-3e58-4f97-8e88-162d1299dc52",
+				"id": "2b386207-17a8-45f2-9249-2eee78724fd7",
 				"type": "tasks",
 				"config": {}
 			},
 			{
-				"id": "558f8bc9-fb5d-469c-b43c-586d3f0db833",
+				"id": "b910d8e0-4a57-4429-a8c0-136767df4817",
 				"type": "time-machine",
 				"config": {
 					"intervals": [
@@ -62,15 +62,15 @@
 					"size": 1,
 					"tiles": [
 						{
-							"id": "18464131-3bd7-4f31-89f0-f24d607080b0",
+							"id": "caa5f01d-6d33-472f-becb-7027c84c2dc2",
 							"size": 1
 						},
 						{
-							"id": "62f0da01-9b72-44a6-8fc9-d17fae44cfa3",
+							"id": "046bc0cc-56ca-4d97-8151-97da12ec21d4",
 							"size": 1.4
 						},
 						{
-							"id": "3e3fc219-30b2-4681-925d-5da502eaf0e0",
+							"id": "5db704f2-ee86-484d-b86b-a2c6be0f7d8a",
 							"size": 1.2
 						}
 					]
@@ -80,11 +80,11 @@
 					"size": 1.6,
 					"tiles": [
 						{
-							"id": "44d01221-5b9a-4b53-b36a-692b80734ce0",
+							"id": "794b594e-bf17-4883-b7a2-28f138724c11",
 							"size": 2
 						},
 						{
-							"id": "558f8bc9-fb5d-469c-b43c-586d3f0db833",
+							"id": "b910d8e0-4a57-4429-a8c0-136767df4817",
 							"size": 1
 						}
 					]
@@ -94,11 +94,11 @@
 					"size": 1.2,
 					"tiles": [
 						{
-							"id": "54978342-e359-4455-9d0d-7e19a5ca6780",
+							"id": "17943e3f-1d0e-403b-b499-239937af354a",
 							"size": 1.6
 						},
 						{
-							"id": "3b6fa441-3e58-4f97-8e88-162d1299dc52",
+							"id": "2b386207-17a8-45f2-9249-2eee78724fd7",
 							"size": 1.2
 						}
 					]
@@ -107,7 +107,7 @@
 		},
 		"showDate": true,
 		"background": "https://atrium-md.com/_assets/backgrounds/meadow.mp4",
-		"backgroundDim": 0.1,
+		"backgroundDim": 0.3,
 		"cardOpacity": 0.6,
 		"cardBlur": 16
 	}
