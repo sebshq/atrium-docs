@@ -1,0 +1,91 @@
+{
+	"atrium": "workspace",
+	"version": 1,
+	"name": "Research desk",
+	"layout": {
+		"modules": [
+			{
+				"id": "956a4a3b-4b5d-4595-8d11-d92a0ce4ee13",
+				"type": "files",
+				"config": {
+					"folder": "Atrium samples/Research desk"
+				}
+			},
+			{
+				"id": "12294ab3-ee4d-446c-bae9-0939817d140a",
+				"type": "recent",
+				"config": {}
+			},
+			{
+				"id": "f3c728af-4f3c-4763-b044-36cb5a084139",
+				"type": "note",
+				"config": {
+					"path": "Atrium samples/Research desk/Research notes.md"
+				}
+			},
+			{
+				"id": "39137455-5a7e-4ba3-ac70-add8d6caa143",
+				"type": "web",
+				"config": {
+					"url": "https://en.wikipedia.org/wiki/Main_Page"
+				}
+			},
+			{
+				"id": "6a312f4b-d8da-4926-9bba-71892ff6a71b",
+				"type": "podcasts",
+				"config": {
+					"path": "Atrium samples/Research desk/Podcasts.md"
+				}
+			}
+		],
+		"left": [],
+		"right": [],
+		"tiles": {
+			"split": "row",
+			"tiles": [
+				{
+					"split": "column",
+					"size": 0.9,
+					"tiles": [
+						{
+							"id": "956a4a3b-4b5d-4595-8d11-d92a0ce4ee13",
+							"size": 1
+						},
+						{
+							"id": "12294ab3-ee4d-446c-bae9-0939817d140a",
+							"size": 1
+						}
+					]
+				},
+				{
+					"id": "f3c728af-4f3c-4763-b044-36cb5a084139",
+					"size": 1.5
+				},
+				{
+					"split": "column",
+					"size": 1.6,
+					"tiles": [
+						{
+							"id": "39137455-5a7e-4ba3-ac70-add8d6caa143",
+							"size": 2
+						},
+						{
+							"id": "6a312f4b-d8da-4926-9bba-71892ff6a71b",
+							"size": 1
+						}
+					]
+				}
+			]
+		},
+		"showDate": true,
+		"background": "https://atrium-md.com/_assets/backgrounds/messina-saint-jerome.jpg",
+		"backgroundDim": 0.15,
+		"cardOpacity": 0.74,
+		"cardBlur": 8
+	},
+	"files": {
+		"Atrium samples/Research desk/Research notes.md": "IyBSZXNlYXJjaCBub3RlcwoKT3BlbiBhIHNvdXJjZSBpbiB0aGUgQnJvd3NlciBjYXJkIG9uIHRoZSByaWdodCwgYW5kIGtlZXAgd2hhdCB5b3UgZmluZCBoZXJlLgoKIyMgUXVlc3Rpb24KCldoYXQgYXJlIHlvdSB0cnlpbmcgdG8gZmluZCBvdXQ/CgojIyBTb3VyY2VzCgotIFtbUmVhZGluZyBsaXN0XV0KCiMjIEZpbmRpbmdzCgotCg==",
+		"Atrium samples/Research desk/Reading list.md": "IyBSZWFkaW5nIGxpc3QKCi0gWyBdIGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1NhaW50X0plcm9tZV9pbl9IaXNfU3R1ZHlfKEFudG9uZWxsb19kYV9NZXNzaW5hKQotIFsgXSBodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9JY29ub2dyYXBoeQo=",
+		"Atrium samples/Research desk/Podcasts.md": "IyBQb2RjYXN0cwoKLSBodHRwczovL3d3dy5uYXNhLmdvdi9mZWVkcy9wb2RjYXN0cy9jdXJpb3VzLXVuaXZlcnNlCi0gaHR0cHM6Ly93d3cubmFzYS5nb3YvZmVlZHMvcG9kY2FzdHMvaG91c3Rvbi13ZS1oYXZlLWEtcG9kY2FzdAo="
+	}
+}

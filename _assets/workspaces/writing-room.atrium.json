@@ -1,0 +1,98 @@
+{
+	"atrium": "workspace",
+	"version": 1,
+	"name": "Writing room",
+	"layout": {
+		"modules": [
+			{
+				"id": "9e98d14d-93ce-4930-80a6-4a85c1f0e865",
+				"type": "timer",
+				"config": {}
+			},
+			{
+				"id": "f2b39d86-76f7-417e-859b-67f254e1120e",
+				"type": "focus",
+				"config": {}
+			},
+			{
+				"id": "726bdc53-c6f6-4027-9106-75e5ef0cae08",
+				"type": "note",
+				"config": {
+					"path": "Atrium samples/Writing room/Draft.md"
+				}
+			},
+			{
+				"id": "ab2e3970-b65f-4136-b8b5-62b4c9e1ff4f",
+				"type": "music",
+				"config": {
+					"path": "Atrium samples/Writing room/Playlist.md"
+				}
+			},
+			{
+				"id": "682c2be0-fb17-4c1c-ae93-65c8d726dae5",
+				"type": "note",
+				"config": {
+					"path": "Atrium samples/Writing room/Ideas.md"
+				}
+			},
+			{
+				"id": "42bdbc28-ea70-4887-bd0a-be2933c49631",
+				"type": "recorder",
+				"config": {}
+			}
+		],
+		"left": [],
+		"right": [],
+		"tiles": {
+			"split": "row",
+			"tiles": [
+				{
+					"split": "column",
+					"size": 0.9,
+					"tiles": [
+						{
+							"id": "9e98d14d-93ce-4930-80a6-4a85c1f0e865",
+							"size": 1.4
+						},
+						{
+							"id": "f2b39d86-76f7-417e-859b-67f254e1120e",
+							"size": 0.6
+						}
+					]
+				},
+				{
+					"id": "726bdc53-c6f6-4027-9106-75e5ef0cae08",
+					"size": 2
+				},
+				{
+					"split": "column",
+					"size": 1,
+					"tiles": [
+						{
+							"id": "ab2e3970-b65f-4136-b8b5-62b4c9e1ff4f",
+							"size": 1.4
+						},
+						{
+							"id": "682c2be0-fb17-4c1c-ae93-65c8d726dae5",
+							"size": 1
+						},
+						{
+							"id": "42bdbc28-ea70-4887-bd0a-be2933c49631",
+							"size": 0.8
+						}
+					]
+				}
+			]
+		},
+		"showDate": true,
+		"background": "https://atrium-md.com/_assets/backgrounds/larsson-evening-lamp.jpg",
+		"backgroundDim": 0.15,
+		"cardOpacity": 0.74,
+		"cardBlur": 10
+	},
+	"files": {
+		"Atrium samples/Writing room/Draft.md": "IyBEcmFmdAoKVGhlIGxhbXAgd2FzIGFscmVhZHkgbGl0IHdoZW4gc2hlIGNhbWUgZG93biwgd2hpY2ggbWVhbnQgc29tZW9uZSBoYWQgYmVlbiB1cCBiZWZvcmUgaGVyLgoKLS0tCgoqV3JpdGUgZm9yIHR3ZW50eS1maXZlIG1pbnV0ZXMgYmVmb3JlIHlvdSByZWFkIGFueSBvZiBpdCBiYWNrLiBTdGFydCB0aGUgdGltZXIgb24gdGhlIGxlZnQ7IHRoZSBGb2N1cyBjYXJkIGtlZXBzIHRoZSBvbmUgdGhpbmcgeW91J3JlIHdvcmtpbmcgb24gaW4gc2lnaHQuIFRhbGsgYSBwYXNzYWdlIG91dCBsb3VkIGludG8gdGhlIFJlY29yZGVyIHdoZW4gdHlwaW5nIGdldHMgaW4gdGhlIHdheS4qCg==",
+		"Atrium samples/Writing room/Ideas.md": "IyBJZGVhcwoKLSBXaG8gbGl0IHRoZSBsYW1wPwotIFRoZSBob3VzZSBpbiB3aW50ZXIsIGZyb20gdGhlIGNhdCdzIHNpZGUKLSBBIGxldHRlciB0aGF0IGFycml2ZXMgZm9ydHkgeWVhcnMgbGF0ZQo=",
+		"Atrium samples/Writing room/Playlist.md": "IyBQbGF5bGlzdAoKLSBbbG9maSBoaXAgaG9wIHJhZGlvLCBiZWF0cyB0byByZWxheCBhbmQgc3R1ZHkgdG9dKGh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9amZLZlBmeUpSZGspCg=="
+	}
+}

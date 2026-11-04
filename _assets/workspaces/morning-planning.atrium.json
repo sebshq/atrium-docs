@@ -1,0 +1,114 @@
+{
+	"atrium": "workspace",
+	"version": 1,
+	"name": "Morning planning",
+	"layout": {
+		"modules": [
+			{
+				"id": "377fde6b-7be3-4212-b575-badc29d1c2b0",
+				"type": "clock",
+				"config": {}
+			},
+			{
+				"id": "deb66f6f-7873-4ba0-a631-abb07800eb02",
+				"type": "weather",
+				"config": {}
+			},
+			{
+				"id": "01b5485e-3ead-4577-b43e-1801e21b0a64",
+				"type": "habits",
+				"config": {
+					"habits": [
+						"walk",
+						"read",
+						"water"
+					]
+				}
+			},
+			{
+				"id": "2c4debe5-05f0-4d3a-a526-0f9876086b2e",
+				"type": "daily",
+				"config": {}
+			},
+			{
+				"id": "c67434a2-f23e-4f63-9cdc-ba9399fe63b0",
+				"type": "agenda",
+				"config": {}
+			},
+			{
+				"id": "bc057608-4411-4510-af6b-d6b728fe5b6d",
+				"type": "tasks",
+				"config": {}
+			},
+			{
+				"id": "810f9b36-9780-4d5b-a606-575aa2bfe724",
+				"type": "time-machine",
+				"config": {
+					"intervals": [
+						"1y",
+						"on-this-date"
+					],
+					"mode": "reading"
+				}
+			}
+		],
+		"left": [],
+		"right": [],
+		"tiles": {
+			"split": "row",
+			"tiles": [
+				{
+					"split": "column",
+					"size": 1,
+					"tiles": [
+						{
+							"id": "377fde6b-7be3-4212-b575-badc29d1c2b0",
+							"size": 1
+						},
+						{
+							"id": "deb66f6f-7873-4ba0-a631-abb07800eb02",
+							"size": 1.4
+						},
+						{
+							"id": "01b5485e-3ead-4577-b43e-1801e21b0a64",
+							"size": 1.2
+						}
+					]
+				},
+				{
+					"split": "column",
+					"size": 1.6,
+					"tiles": [
+						{
+							"id": "2c4debe5-05f0-4d3a-a526-0f9876086b2e",
+							"size": 2
+						},
+						{
+							"id": "810f9b36-9780-4d5b-a606-575aa2bfe724",
+							"size": 1
+						}
+					]
+				},
+				{
+					"split": "column",
+					"size": 1.2,
+					"tiles": [
+						{
+							"id": "c67434a2-f23e-4f63-9cdc-ba9399fe63b0",
+							"size": 1.6
+						},
+						{
+							"id": "bc057608-4411-4510-af6b-d6b728fe5b6d",
+							"size": 1.2
+						}
+					]
+				}
+			]
+		},
+		"showDate": true,
+		"background": "https://atrium-md.com/_assets/backgrounds/meadow.mp4",
+		"backgroundDim": 0.1,
+		"cardOpacity": 0.6,
+		"cardBlur": 16
+	}
+}
