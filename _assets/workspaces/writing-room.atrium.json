@@ -5,38 +5,38 @@
 	"layout": {
 		"modules": [
 			{
-				"id": "9e98d14d-93ce-4930-80a6-4a85c1f0e865",
+				"id": "44782dbb-1641-4ddc-843a-9574a5aa81a7",
 				"type": "timer",
 				"config": {}
 			},
 			{
-				"id": "f2b39d86-76f7-417e-859b-67f254e1120e",
+				"id": "1159b993-b6af-42db-8bea-15fe48f13293",
 				"type": "focus",
 				"config": {}
 			},
 			{
-				"id": "726bdc53-c6f6-4027-9106-75e5ef0cae08",
+				"id": "3a9cebfa-8fbe-456d-85c0-0485838bf6fd",
 				"type": "note",
 				"config": {
 					"path": "Atrium samples/Writing room/Draft.md"
 				}
 			},
 			{
-				"id": "ab2e3970-b65f-4136-b8b5-62b4c9e1ff4f",
+				"id": "670bb8e2-c89f-4886-b56d-02033732482c",
 				"type": "music",
 				"config": {
 					"path": "Atrium samples/Writing room/Playlist.md"
 				}
 			},
 			{
-				"id": "682c2be0-fb17-4c1c-ae93-65c8d726dae5",
+				"id": "104bfd52-cee7-4a47-a24c-779e6af17112",
 				"type": "note",
 				"config": {
 					"path": "Atrium samples/Writing room/Ideas.md"
 				}
 			},
 			{
-				"id": "42bdbc28-ea70-4887-bd0a-be2933c49631",
+				"id": "3fb84dfb-2d44-4699-980e-69626b45db55",
 				"type": "recorder",
 				"config": {}
 			}
@@ -51,17 +51,17 @@
 					"size": 0.9,
 					"tiles": [
 						{
-							"id": "9e98d14d-93ce-4930-80a6-4a85c1f0e865",
+							"id": "44782dbb-1641-4ddc-843a-9574a5aa81a7",
 							"size": 1.4
 						},
 						{
-							"id": "f2b39d86-76f7-417e-859b-67f254e1120e",
+							"id": "1159b993-b6af-42db-8bea-15fe48f13293",
 							"size": 0.6
 						}
 					]
 				},
 				{
-					"id": "726bdc53-c6f6-4027-9106-75e5ef0cae08",
+					"id": "3a9cebfa-8fbe-456d-85c0-0485838bf6fd",
 					"size": 2
 				},
 				{
@@ -69,15 +69,15 @@
 					"size": 1,
 					"tiles": [
 						{
-							"id": "ab2e3970-b65f-4136-b8b5-62b4c9e1ff4f",
+							"id": "670bb8e2-c89f-4886-b56d-02033732482c",
 							"size": 1.4
 						},
 						{
-							"id": "682c2be0-fb17-4c1c-ae93-65c8d726dae5",
+							"id": "104bfd52-cee7-4a47-a24c-779e6af17112",
 							"size": 1
 						},
 						{
-							"id": "42bdbc28-ea70-4887-bd0a-be2933c49631",
+							"id": "3fb84dfb-2d44-4699-980e-69626b45db55",
 							"size": 0.8
 						}
 					]
@@ -85,10 +85,10 @@
 			]
 		},
 		"showDate": true,
-		"background": "https://atrium-md.com/_assets/backgrounds/larsson-evening-lamp.jpg",
-		"backgroundDim": 0.15,
-		"cardOpacity": 0.74,
-		"cardBlur": 10
+		"background": "https://atrium-md.com/_assets/backgrounds/window-rain.mp4",
+		"backgroundDim": 0.2,
+		"cardOpacity": 0.7,
+		"cardBlur": 12
 	},
 	"files": {
 		"Atrium samples/Writing room/Draft.md": "IyBEcmFmdAoKVGhlIGxhbXAgd2FzIGFscmVhZHkgbGl0IHdoZW4gc2hlIGNhbWUgZG93biwgd2hpY2ggbWVhbnQgc29tZW9uZSBoYWQgYmVlbiB1cCBiZWZvcmUgaGVyLgoKLS0tCgoqV3JpdGUgZm9yIHR3ZW50eS1maXZlIG1pbnV0ZXMgYmVmb3JlIHlvdSByZWFkIGFueSBvZiBpdCBiYWNrLiBTdGFydCB0aGUgdGltZXIgb24gdGhlIGxlZnQ7IHRoZSBGb2N1cyBjYXJkIGtlZXBzIHRoZSBvbmUgdGhpbmcgeW91J3JlIHdvcmtpbmcgb24gaW4gc2lnaHQuIFRhbGsgYSBwYXNzYWdlIG91dCBsb3VkIGludG8gdGhlIFJlY29yZGVyIHdoZW4gdHlwaW5nIGdldHMgaW4gdGhlIHdheS4qCg==",

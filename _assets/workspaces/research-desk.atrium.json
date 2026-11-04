@@ -5,33 +5,33 @@
 	"layout": {
 		"modules": [
 			{
-				"id": "956a4a3b-4b5d-4595-8d11-d92a0ce4ee13",
+				"id": "e3e2acd1-aeff-4fe0-9661-ab2718d518a6",
 				"type": "files",
 				"config": {
 					"folder": "Atrium samples/Research desk"
 				}
 			},
 			{
-				"id": "12294ab3-ee4d-446c-bae9-0939817d140a",
+				"id": "dd52396e-c8da-4157-ab90-656732d75cf9",
 				"type": "recent",
 				"config": {}
 			},
 			{
-				"id": "f3c728af-4f3c-4763-b044-36cb5a084139",
+				"id": "fb6e4277-bfb3-44e2-8835-2150b782b1f2",
 				"type": "note",
 				"config": {
 					"path": "Atrium samples/Research desk/Research notes.md"
 				}
 			},
 			{
-				"id": "39137455-5a7e-4ba3-ac70-add8d6caa143",
+				"id": "afcb0a07-786a-4e2c-ba0a-ecc5832d2972",
 				"type": "web",
 				"config": {
 					"url": "https://en.wikipedia.org/wiki/Main_Page"
 				}
 			},
 			{
-				"id": "6a312f4b-d8da-4926-9bba-71892ff6a71b",
+				"id": "8e3cdf14-21f4-440f-a1a7-128518827a89",
 				"type": "podcasts",
 				"config": {
 					"path": "Atrium samples/Research desk/Podcasts.md"
@@ -48,17 +48,17 @@
 					"size": 0.9,
 					"tiles": [
 						{
-							"id": "956a4a3b-4b5d-4595-8d11-d92a0ce4ee13",
+							"id": "e3e2acd1-aeff-4fe0-9661-ab2718d518a6",
 							"size": 1
 						},
 						{
-							"id": "12294ab3-ee4d-446c-bae9-0939817d140a",
+							"id": "dd52396e-c8da-4157-ab90-656732d75cf9",
 							"size": 1
 						}
 					]
 				},
 				{
-					"id": "f3c728af-4f3c-4763-b044-36cb5a084139",
+					"id": "fb6e4277-bfb3-44e2-8835-2150b782b1f2",
 					"size": 1.5
 				},
 				{
@@ -66,11 +66,11 @@
 					"size": 1.6,
 					"tiles": [
 						{
-							"id": "39137455-5a7e-4ba3-ac70-add8d6caa143",
+							"id": "afcb0a07-786a-4e2c-ba0a-ecc5832d2972",
 							"size": 2
 						},
 						{
-							"id": "6a312f4b-d8da-4926-9bba-71892ff6a71b",
+							"id": "8e3cdf14-21f4-440f-a1a7-128518827a89",
 							"size": 1
 						}
 					]
