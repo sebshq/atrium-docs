@@ -6,14 +6,16 @@
 .pages a { text-decoration: none; color: var(--muted); padding: 0.3rem 0.7rem; border-radius: 8px; transition: background 0.2s, color 0.2s; }
 .pages a:hover { color: var(--cream); background: rgba(243, 237, 228, 0.05); }
 .pages a.on { color: var(--cream); background: rgba(143, 144, 248, 0.14); }
-@media (max-width: 900px) { .guide { grid-template-columns: 1fr; } .pages { position: static; display: flex; flex-wrap: wrap; max-height: none; } .pages .eyebrow { display: none; } }
+@media (max-width: 900px) { .guide { grid-template-columns: 1fr; padding-top: 5rem; } .pages { position: static; display: flex; flex-wrap: nowrap; overflow-x: auto; max-height: none; margin: 0 calc(-1 * clamp(1.2rem, 4vw, 3rem)); padding: 0 clamp(1.2rem, 4vw, 3rem); scrollbar-width: none; } .pages a { white-space: nowrap; } .pages .eyebrow { display: none; } }
 
 .doc { min-width: 0; }
 .doc-head { max-width: 46rem; margin-bottom: clamp(3rem, 7vw, 6rem); }
 .doc-head h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); }
+.doc-head img, .doc-head video { display: block; max-width: 100%; height: auto; }
 .doc-head p:not(.eyebrow) { color: var(--muted); font-size: 1.2rem; }
 .doc .feature { margin-bottom: clamp(4rem, 9vw, 7rem); grid-template-columns: 1fr 1.25fr; }
 .doc .feature.wide { display: block; max-width: 52rem; }
+@media (max-width: 860px) { .doc .feature { grid-template-columns: 1fr; } }
 .doc .feature h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
 .doc .feature h3 { font-size: 1.3rem; margin-top: 1.6em; }
 .doc .copy p:not(.eyebrow), .doc .copy li { color: var(--muted); font-size: 1.05rem; }
