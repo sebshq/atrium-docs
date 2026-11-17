@@ -23,13 +23,13 @@ h3 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
 
 .btn { display: inline-block; padding: 0.85em 1.5em; border-radius: 999px; background: var(--cream); color: var(--ink); text-decoration: none; font-weight: 500; transition: transform 0.3s var(--ease), background 0.3s; }
 .btn:hover { transform: translateY(-2px); background: #fff; }
-.btn.ghost { background: transparent; color: var(--cream); box-shadow: inset 0 0 0 1px rgba(243, 237, 228, 0.35); }
-.btn.ghost:hover { background: rgba(243, 237, 228, 0.08); }
+.btn.ghost { background: transparent; color: var(--cream); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--cream) 35%, transparent); }
+.btn.ghost:hover { background: color-mix(in srgb, var(--cream) 8%, transparent); }
 .btn.small { padding: 0.5em 1.1em; font-size: 0.9rem; }
 .cta { display: flex; gap: 0.8rem; flex-wrap: wrap; }
 
 /* Top bar */
-.topbar { position: fixed; inset: 0 0 auto; z-index: 10; display: flex; align-items: center; gap: 2rem; padding: 1rem clamp(1rem, 4vw, 3rem); backdrop-filter: blur(14px) saturate(1.4); -webkit-backdrop-filter: blur(14px) saturate(1.4); background: rgba(15, 14, 13, 0.35); border-bottom: 1px solid var(--line); }
+.topbar { position: fixed; inset: 0 0 auto; z-index: 10; display: flex; align-items: center; gap: 2rem; padding: 1rem clamp(1rem, 4vw, 3rem); backdrop-filter: blur(14px) saturate(1.4); -webkit-backdrop-filter: blur(14px) saturate(1.4); background: color-mix(in srgb, var(--ink) 35%, transparent); border-bottom: 1px solid var(--line); }
 .brand { font: italic 600 1.5rem/1 var(--serif); }
 .brand span { color: var(--accent); }
 .topbar a { text-decoration: none; }
@@ -41,7 +41,7 @@ h3 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
 /* Hero */
 .hero { position: relative; min-height: 100svh; display: grid; align-content: end; padding: 8rem clamp(1.2rem, 5vw, 4rem) 2rem; overflow: hidden; }
 .stage { position: absolute; inset: 69px 0 0; }
-.stage::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15,14,13,0.92) 0%, rgba(15,14,13,0.75) 35%, rgba(15,14,13,0.15) 65%, rgba(15,14,13,0) 100%), linear-gradient(180deg, rgba(15,14,13,0) 55%, var(--ink) 100%); }
+.stage::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, color-mix(in srgb, var(--ink) 92%, transparent) 0%, color-mix(in srgb, var(--ink) 75%, transparent) 35%, color-mix(in srgb, var(--ink) 15%, transparent) 65%, color-mix(in srgb, var(--ink) 0%, transparent) 100%), linear-gradient(180deg, color-mix(in srgb, var(--ink) 0%, transparent) 55%, var(--ink) 100%); }
 .layer { position: absolute; inset: 0; opacity: 0; transform: scale(1.06); transition: opacity 1.4s var(--ease), transform 7s linear; }
 .layer.on { opacity: 1; transform: scale(1); }
 .layer > video { width: 100%; height: 100%; object-fit: cover; object-position: top; }
@@ -49,7 +49,7 @@ h3 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
 .hero-copy { position: relative; max-width: 46rem; animation: rise 1.2s var(--ease) both 0.2s; }
 .lede { font-size: clamp(1.05rem, 1.6vw, 1.3rem); color: var(--muted); max-width: 34rem; margin: 0 0 2rem; }
 .chips { position: relative; display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 3rem; animation: rise 1.2s var(--ease) both 0.5s; }
-.chip { font: 500 0.85rem/1 var(--sans); color: var(--muted); background: rgba(243,237,228,0.06); border: 1px solid var(--line); border-radius: 999px; padding: 0.6em 1em; cursor: pointer; transition: all 0.3s var(--ease); backdrop-filter: blur(8px); }
+.chip { font: 500 0.85rem/1 var(--sans); color: var(--muted); background: color-mix(in srgb, var(--cream) 6%, transparent); border: 1px solid var(--line); border-radius: 999px; padding: 0.6em 1em; cursor: pointer; transition: all 0.3s var(--ease); backdrop-filter: blur(8px); }
 .chip:hover { color: var(--cream); }
 .chip[aria-pressed="true"] { background: var(--cream); color: var(--ink); border-color: var(--cream); }
 
@@ -73,6 +73,42 @@ h3 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
 .cap em { font-family: var(--serif); color: var(--accent); font-size: 1rem; }
 .gallery .tile:nth-child(3n+2) { transition-delay: 0.1s; }
 .gallery .tile:nth-child(3n) { transition-delay: 0.2s; }
+
+/* Light and dark. The page's colours are animatable, so everything that uses them turns together, while the sky behind
+   the page, three screens tall, slides from night through dawn to day. */
+@property --ink { syntax: '<color>'; inherits: true; initial-value: #0f0e0d; }
+@property --ink-2 { syntax: '<color>'; inherits: true; initial-value: #1a1816; }
+@property --cream { syntax: '<color>'; inherits: true; initial-value: #f3ede4; }
+@property --muted { syntax: '<color>'; inherits: true; initial-value: rgba(243, 237, 228, 0.62); }
+@property --line { syntax: '<color>'; inherits: true; initial-value: rgba(243, 237, 228, 0.12); }
+@property --accent { syntax: '<color>'; inherits: true; initial-value: #8f90f8; }
+:root { background: var(--ink); transition: --ink 1.6s cubic-bezier(0.5, 0, 0.3, 1), --ink-2 1.6s cubic-bezier(0.5, 0, 0.3, 1), --cream 0.9s ease 0.5s, --muted 0.9s ease 0.5s, --line 0.9s ease 0.5s, --accent 0.9s ease 0.5s; }
+:root.day { --ink: #f7f1e8; --ink-2: #efe6d8; --cream: #1b1916; --muted: rgba(27, 25, 22, 0.66); --line: rgba(27, 25, 22, 0.13); --accent: #5557d6; }
+body.landing { overflow-x: clip; background: transparent; }
+body.landing::before { content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(180deg, #0f0e0d 0%, #0f0e0d 30%, #2a2236 40%, #8a4f5c 47%, #e0956b 53%, #f6cf9c 59%, #f7ecdc 68%, #f7f1e8 100%) 0 0 / 100% 300%;
+  transition: background-position 1.8s cubic-bezier(0.5, 0, 0.3, 1); }
+.day body.landing::before { background-position: 0 100%; }
+.day .btn:hover { background: #000; }
+.day .tile .scene, .day .shot { box-shadow: 0 14px 34px rgba(90, 60, 30, 0.22); }
+.day .tile:hover .scene { box-shadow: 0 30px 60px rgba(90, 60, 30, 0.3); }
+.day .demo.stack i { background: #fbf7f0; box-shadow: 0 20px 40px rgba(90, 60, 30, 0.18); }
+.day kbd { background: linear-gradient(#fffdf9, #efe7da); border-color: #d9cfbf; box-shadow: 0 3px 0 #cfc3b0, inset 0 1px 0 #fff; }
+.day .expand { background: rgba(247, 241, 232, 0.8); }
+.day .price-card { background: linear-gradient(color-mix(in srgb, var(--ink) 78%, transparent), color-mix(in srgb, var(--ink) 92%, transparent)), url('/_assets/ws-hillside.jpg') center / cover; box-shadow: 0 40px 100px rgba(90, 60, 30, 0.2); }
+
+/* The toggle: a pill whose knob is the moon by night and the sun by day. */
+.tone { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 0.8rem; margin: -1.5rem 0 2.2rem; font: 500 0.85rem/1 var(--sans); color: var(--muted); }
+.tone span:first-child, .tone[aria-pressed="true"] span:last-child { color: var(--cream); }
+.tone[aria-pressed="true"] span:first-child { color: var(--muted); }
+.tone i { position: relative; width: 3.6rem; height: 1.9rem; border-radius: 999px; background: #24212e; box-shadow: inset 0 0 0 1px var(--line); transition: background 1.2s; }
+.tone[aria-pressed="true"] i { background: #f1d3a6; box-shadow: inset 0 0 0 1px var(--line); }
+/* The knob: a crescent cut by its own shadow, which slides off as it crosses, leaving a sun. */
+.tone i::after { content: ''; position: absolute; top: 0.3rem; left: 0.3rem; width: 1.3rem; height: 1.3rem; border-radius: 50%; background: transparent; box-shadow: inset 0.42rem -0.18rem 0 0 #e9e4f5;
+  transition: transform 0.8s var(--ease), box-shadow 0.8s var(--ease), background 0.8s; }
+.tone[aria-pressed="true"] i::after { transform: translateX(1.7rem) rotate(90deg); background: #ffb347; box-shadow: inset 0 0 0 0 #ffb347, 0 0 0.9rem 0.15rem rgba(255, 170, 60, 0.7); }
+.tone:focus-visible i { outline: 2px solid var(--accent); outline-offset: 3px; }
+.tone:hover i { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--cream) 30%, transparent); }
 
 /* A workspace picture, always 16:10 */
 .scene { position: relative; aspect-ratio: 16 / 10; border-radius: 14px; overflow: hidden; container-type: inline-size; background: #222; }
@@ -143,7 +179,7 @@ kbd { font: 500 1.05rem/1 var(--mono); min-width: 2.6rem; padding: 0.7rem 0.75re
 
 /* Complete */
 .complete { display: grid; place-items: center; }
-.price-card { max-width: 40rem; text-align: center; padding: clamp(2.5rem, 6vw, 4.5rem); border-radius: 24px; background: linear-gradient(rgba(15,14,13,0.55), rgba(15,14,13,0.85)), url('/_assets/ws-hillside.jpg') center / cover; border: 1px solid var(--line); box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
+.price-card { max-width: 40rem; text-align: center; padding: clamp(2.5rem, 6vw, 4.5rem); border-radius: 24px; background: linear-gradient(color-mix(in srgb, var(--ink) 55%, transparent), color-mix(in srgb, var(--ink) 85%, transparent)), url('/_assets/ws-hillside.jpg') center / cover; border: 1px solid var(--line); box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
 .price-card p { color: var(--muted); }
 .price-card .note { font: italic 1.2rem var(--serif); color: var(--accent); }
 .price-card .cta { justify-content: center; margin-top: 2rem; }
